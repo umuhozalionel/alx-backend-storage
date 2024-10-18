@@ -1,0 +1,4 @@
+-- Task: List all databases
+SELECT SCHEMA_NAME 
+FROM INFORMATION_SCHEMA.SCHEMATA;
+
