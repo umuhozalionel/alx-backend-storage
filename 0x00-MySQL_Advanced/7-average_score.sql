@@ -1,3 +1,6 @@
+-- Drop procedure if it exists
+DROP PROCEDURE IF EXISTS ComputeAverageScoreForUser;
+
 -- Create stored procedure ComputeAverageScoreForUser
 DELIMITER //
 
@@ -10,7 +13,7 @@ BEGIN
     -- Compute the average score
     SELECT AVG(score) INTO avg_score
     FROM corrections
-    WHERE user_id = user_id;
+    WHERE corrections.user_id = user_id;
 
     -- Store the average score in the users table
     UPDATE users
