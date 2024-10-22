@@ -1,5 +1,7 @@
-// Updating a document
-db.school.updateMany(
+// Updating script
+var result = db.school.updateMany(
   { name: "Holberton school" },
   { $set: { address: "972 Mission street" } }
 );
+print("WriteResult({ \"nMatched\" : " + result.matchedCount + ", \"nUpserted\" : 0, \"nModified\" : " + result.modifiedCount + " })");
+
