@@ -1,3 +1,2 @@
-// List all databases
+// Show available databases
 show dbs;
-
