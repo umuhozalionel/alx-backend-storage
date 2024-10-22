@@ -1,3 +1,4 @@
-// Update script
+// Deletion script
 var result = db.school.deleteMany({ name: "Holberton school" });
 print("WriteResult({ \"acknowledged\" : " + result.acknowledged + ", \"deletedCount\" : " + result.deletedCount + " })");
+
