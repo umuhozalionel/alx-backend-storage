@@ -1,0 +1,3 @@
+// Listing all documents listed in school
+db.school.find().pretty();
+
