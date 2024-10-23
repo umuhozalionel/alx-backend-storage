@@ -1,0 +1,3 @@
+// Update script
+var result = db.school.deleteMany({ name: "Holberton school" });
+printjson({ "acknowledged": result.acknowledged, "deletedCount": result.deletedCount });
