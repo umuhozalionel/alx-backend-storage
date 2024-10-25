@@ -1,0 +1,2 @@
+// Creating a script to find documents matching a specific criteria
+db.school.find({ name: "Holberton school" }).pretty();
