@@ -1,16 +1,11 @@
 #!/usr/bin/env python3
-"""Main file"""
+""" Main file """
 
 from exercise import Cache
 
 cache = Cache()
-TEST_CASES = {
-    b"foo": None,
-    123: int,
-    "bar": lambda d: d.decode("utf-8")
-}
-
-for value, fn in TEST_CASES.items():
-    key = cache.store(value)
-    assert cache.get(key, fn=fn) == value
-    print(f"Key: {key}, Stored value: {value}, Retrieved value: {cache.get(key, fn=fn)}")
+cache.store(b"first")
+print(cache._redis.get(cache.store.__qualname__))
+cache.store(b"second")
+cache.store(b"third")
+print(cache._redis.get(cache.store.__qualname__))
